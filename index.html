@@ -9,6 +9,20 @@
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+
     <script>(function (w, d) { w.CollectId = "60a52812c669624eb529e736"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async = true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
 
     <style>
@@ -17,16 +31,18 @@
         @import url('https://fonts.googleapis.com/css2?family=Goldman');
         @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond');
 
-        body,
         html {
             margin: 0;
             padding: 0;
-            overflow: hidden;
             -webkit-tap-highlight-color: transparent;
-            background-color: #000000;
+            background-color: #1D1D1D;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
+
+
 
         a {
             color: inherit;
@@ -39,611 +55,1551 @@
 
         .wrapper {
             width: 100vw;
-            height: 35vh;
+            height: 15vh;
+            margin-top: -8px !important;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            z-index: 300;
-            background-color: rgb(0, 0, 0);
-            position: absolute;
-        }
-
-        .header-logo {
-            display: flex;
-            flex-direction: row;
-            margin-top: -15vh;
-        }
-
-        .navbar {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
             justify-content: space-between;
-            margin-top: 18vh;
-            z-index: 100;
-            position: fixed;
+            z-index: 1200;
+            background-color: #160000;
         }
 
-        .header-logo-item1 {
-            height: 120px;
-            margin-right: 1vw;
-            cursor: pointer;
-            transition: .3s;
-            z-index: 600;
-        }
-
-        .header-logo-item2 {
-            height: 80px;
-            margin-top: 4vh;
-            cursor: pointer;
-            transition: .3s;
-            z-index: 600;
-        }
-
-        .header-logo-item3 {
-            height: 65px;
-            margin-left: 0vw;
-            margin-top: 6vh;
-            cursor: pointer;
-            transition: .3s;
-            z-index: 600;
-        }
-
-        .navbar>ul {
+        .logo {
             display: flex;
-            justify-content: center;
-            list-style: none;
-        }
-
-        .navbar ul li {
-            position: relative;
-        }
-
-        .navbar ul li a {
-            display: block;
-            color: #fff;
-            height: 40px;
-            width: 180px;
-            text-align: center;
-            padding: 20px 10px;
-            letter-spacing: 2px;
-            transition: all 0.2s ease;
-        }
-
-        .navbar ul>li a {
-            margin-right: 1px;
-        }
-
-        .navbar ul>li:last-child a {
-            margin-right: 0;
-        }
-
-        .navbar ul li a .icon {
-            width: 25px;
-            display: inline-block;
-            position: fixed;
-        }
-
-        .a_parent {
-            font-family: Raleway;
-            color: white;
-            padding: 15px;
-            cursor: pointer;
-            font-size: 14pt;
-            transition: .1s;
-            border-radius: 20px;
-        }
-
-        .a_parent2 {
-            font-family: Raleway;
-            color: white;
-            padding: 15px;
-            cursor: pointer;
-            font-size: 14pt;
-            transition: .1s;
-            border-radius: 20px;
-        }
-
-        .navbar ul li a:hover,
-        .navbar ul li a.a_parent.active,
-        .navbar ul li a.a_parent2.active,
-        .navbar .dd_menu ul li a:hover,
-        .navbar .dd_menu ul li a.active,
-        .navbar .dd_menu2 ul li a:hover,
-        .navbar .dd_menu2 ul li a.active {
-            background: #030225;
-            color: #00eeff;
-            transition: .1s;
-            transform: translate(0, -2px);
-        }
-
-        .navbar .dd_menu {
-            position: absolute;
-            top: 80px;
-            left: 0;
-            display: none;
-        }
-
-        .navbar .dd_menu ul {
-            list-style: none;
-        }
-
-        .navbar .dd_menu2 ul {
-            list-style: none;
-        }
-
-        .navbar .dd_menu ul li a {
-            width: 180px;
-            background: #050436;
-            transition: .1s;
-            transform: translate(0, -2px);
-            text-align: left;
-            padding: 20px;
-        }
-
-        .navbar .dd_menu:before {
-            content: "";
-            position: absolute;
-            top: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1;
-            border: 15px solid;
-            border-color: transparent transparent #ffc400 transparent;
-        }
-
-        .navbar ul li a.a_parent.active+.dd_menu {
-            display: block;
-        }
-
-        .navbar ul li a.a_parent2.active+.dd_menu {
-            display: block;
-        }
-
-
-        .menu-icon {
-            margin-right: 20px;
-            cursor: pointer;
-            height: 60px;
-            width: 60px;
-            align-items: center;
-            justify-content: center;
-            display: none;
-            transition: .3s;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .menu-icon ion-icon {
-            font-size: 20pt;
-            color: white;
-        }
-
-        .menu-nav {
-            overflow-y: scroll;
-            height: 50vh;
-            width: 90vw;
-            background-color: #302ebe;
-            display: none;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            border-radius: 15px;
-            margin-top: 125px !important;
-            filter: drop-shadow(3px 3px 10px #000000);
+            padding: 0;
+            margin-left: 20px;
+            padding-left: 10px;
             padding-top: 10px;
-            position: fixed;
-            margin-left: 5vw;
-            z-index: 10;
+
+        }
+
+        .logoimg {
+            width: 60%;
+            height: auto;
+            z-index: 1200;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: center;
+            padding: 0;
+            margin: 0;
+            z-index: 1200;
+        }
+
+        .list-items {
+            display: flex;
+            padding-right: 10px;
+            padding-left: 10px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            border-right: 1px solid rgb(255, 217, 0);
+            z-index: 1200;
+        }
+
+        .list-items p {
+            color: white;
+            padding: 0;
+            margin: 0;
+            font-family: Cormorant Garamond;
+            font-size: 20px;
+            z-index: 1200;
+        }
+
+        .name {
+            display: block;
+            position: absolute;
+            margin-top: 28vh;
+            margin-left: 32vw;
+        }
+
+        .name p {
+            color: white;
+            padding: 0;
+            font-family: Cormorant Garamond;
+            font-size: 80px
+        }
+
+        .cursor {
+            width: 0px;
+            height: 0px;
+            border: 25px solid rgb(0, 255, 255);
+            z-index: 1000;
+            border-radius: 50%;
+            position: absolute;
+            transition-timing-function: ease-out;
+            animation: customAnim .5s infinite alternate;
+            opacity: .5;
+        }
+
+        .cursor::after {
+            content: "";
+            width: 0px;
+            height: 0px;
+            border: 10px solid rgb(0, 1, 85);
+            border-radius: 50%;
+            position: absolute;
+            opacity: 1;
+            top: -10px;
+            left: -10px;
+            transition-timing-function: ease-out;
+            animation: customAnim2 .5s infinite alternate;
+        }
+
+        @keyframes customAnim {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(.9);
+            }
+
+        }
+
+        @keyframes customAnim2 {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(.9);
+            }
+
+        }
+
+        @keyframes cursorAnim2 {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(3);
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0
+            }
+        }
+
+        .expand {
+            animation: cursoranim3 .5s forwards;
+            border: 25px solid rgb(0, 255, 255);
+            opacity: 1;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <script>
+        const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', e => {
+            console.log(e);
+            cursor.setAttribute("style", "top: " + (e.pageY - 20) + "px; left: " + (e.pageX - 20) + "px;")
+        })
+
+        document.addEventListener('click', () => {
+            cursor.classList.add("expand");
+
+            setTimeout(() => {
+                cursor.classList.remove("expand");
+            }, 500)
+        })
+    </script>
+
+    <div class="wrapper">
+        <div class="logo">
+            <div>
+                <img src="https://i.ibb.co/Fbs1SDd/Logo-Final2.png" alt="Quantum Racing" border="0" class="logoimg"></a>
+            </div>
+            <div class="list">
+                <div class="list-items">
+                    <a href="">
+                        <p>F1 in Schools</p>
+                    </a>
+                </div>
+                <div class="list-items">
+                    <a href="">
+                        <p>Team Quantum</p>
+                    </a>
+                </div>
+                <div class="list-items">
+                    <a href="">
+                        <p>Our Car</p>
+                    </a>
+                    
+                </div>
+                <div class="list-items">
+                    <a href="">
+                        <p>Weblogs</p>
+                    </a>
+                    
+                </div>
+                <div class="list-items">
+                    <a href="">
+                        <p>Contact Us</p>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="name">
+        <p>QUANTUM RACING</p>
+        <i>
+            <p style="font-size:35px; color: rgb(255, 237, 134); margin-top: -75px;margin-left: 10px">Delve into the
+                intricacies</p>
+        </i>
+    </div>
+
+    <div style="margin-left:0px; margin-top: -42px;">
+        <video width="904px" height="595px" autoplay>
+            <source src="./Init.mp4" type="video/mp4">
+    </div>
+
+    <hr color="yellow" style="margin-bottom: 0; width: 100vw; border-width: 1px; margin-top: -46px; margin-left:0px;">
+
+    <style>
+        .box {
+            height: 100vh;
+            width: 100vw;
+            background-image: url('https://english.cdn.zeenews.com/sites/default/files/2021/08/18/961911-f1.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .box2 {
+            padding: 0%;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(0, 5, 77);
+            opacity: 0.7;
+        }
+
+        .box3 {
+            padding: 0%;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .box3 h1 {
+            color: rgb(255, 255, 255);
+            font-family: Cormorant Garamond;
+            font-size: 80px;
+            margin: 0;
+        }
+    </style>
+
+    <div class="box">
+        <div class="box2">
+            <div class="box3">
+                <h1 style="padding-top: 43vh">INDIAN NATIONAL</h1>
+                <h1 style="padding-top: 50px">CHAMPIONS</h1>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #mainflex1 {
+            margin-left: 0px;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+        }
+
+        .flex1_2 {
+            display: flex;
+            flex-direction: row;
+            margin-top: relative;
+            width: 90vw;
+            height: 75vh;
+            background-color: #ffe8cb;
+            border-radius: 15px;
+            filter: drop-shadow(5px 5px 5px #300000);
+            flex-wrap: wrap;
+            padding-top: 50px;
+        }
+
+        .flex1_2-container {
+            display: block;
+            margin-left: 50px;
+            width: 60vw;
+        }
+
+        .flex1_2-container-img {
+            display: block;
+            margin-top: 70px;
+            margin-left: -200px;
+            transform: rotate(90deg)
+        }
+
+        .flex1_2-container-img img {
+            width: 75%;
+        }
+
+        .flex1_2-container h2 {
+            font-size: 20pt;
+            font-family: Roboto;
+            font-weight: 600;
+            color: #000000;
+            padding-left: 25px;
+            margin-bottom: 0px
+        }
+
+        .flex1_2-container p {
+            font-size: 16pt;
+            font-family: 'Noto Serif', serif;
+            color: #05004b;
+            padding-bottom: 0px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    </style>
+
+    <div id="mainflex1">
+        <div class="flex1_2">
+            <div class="flex1_2-container">
+                <h2>What is F1 in Schools?</h2>
+                <p style='text-align: justify;
+                      text-justify: inter-word'>
+                    F1 in Schools a unique global challenge. Teams of students aged 9 to 19 design, construct and race
+                    miniature Formula 1
+                    cars of the future, powered by a compressed air cylinder. The challenge inspires teams to use IT to
+                    learn about physics,
+                    aerodynamics, designing, manufacturing, graphics, marketing, teamwork, media skills, and apply them
+                    in a
+                    competitive yet
+                    practical and exciting way.</p>
+
+                <p>The competition takes place at various levels- regionally and nationally and finally, the best teams
+                    win
+                    a place at the
+                    F1 in Schools World Finals. Teams raise sponsorship to fund researches, travel, manufacturing and
+                    prepare marketing
+                    strategies to promote sponsors and F1 in Schools.</p>
+
+            </div>
+            <div class="flex1_2-container-img">
+                <img src="https://i.ibb.co/6WxJr8H/F1-in-schools.png">
+            </div>
+        </div>
+    </div>
+
+    <hr color="yellow" style="margin-bottom: 0; width: 100vw; border-width: 1px; margin-top: -2px; margin-left:-5px;">
+
+
+    <style>
+        #meet {
+            background-color: #1D1D1D
+        }
+
+        .meet h1 {
+            color: rgb(255, 255, 255);
+            padding: 0;
+            font-family: Cormorant Garamond;
+            font-size: 50px;
+            margin-left: 50px;
+        }
+
+        .MeetUs {
+            display: flex;
+            background-color: #031625;
+            margin-bottom: -8.5px;
+            margin-left: 0px;
+            margin-right: 0px;
+            width: 100vw;
+        }
+
+        .MeetUs:hover .tl-item {
+            width: 23.3333vw;
+        }
+
+        .tl-item {
+            transform: translate3d(0, 0, 0);
+            position: relative;
+            width: 16.666666666666667vw;
+            height: 100vh;
+            color: #fff;
+            overflow: hidden;
+            transition: width 0.5s ease;
         }
 
         /* Hide scrollbar for Chrome, Safari and Opera */
-        .menu-nav::-webkit-scrollbar {
+        .tl-item::-webkit-scrollbar {
             display: none;
         }
 
         /* Hide scrollbar for IE, Edge and Firefox */
-        .menu-nav {
+        .tl-item {
             -ms-overflow-style: none;
             /* IE and Edge */
             scrollbar-width: none;
             /* Firefox */
+            z-index: 1200;
         }
 
-        .menu-list {
+        .tl-item:before,
+        .tl-item:after {
+            transform: translate3d(0, 0, 0);
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .tl-item:after {
+            background: rgba(3, 22, 37, 0.85);
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        .tl-item:before {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 75%);
+            z-index: 1;
+            opacity: 0;
+            transform: translate3d(0, 0, 0) translateY(50%);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .tl-item:hover {
+            width: 50% !important;
+        }
+
+        .tl-item:hover:after {
+            opacity: 0;
+        }
+
+        .tl-item:hover:before {
+            opacity: 1;
+            transform: translate3d(0, 0, 0) translateY(0);
+            transition: opacity 1s ease, transform 1s ease 0.25s;
+        }
+
+        .tl-item:hover .tl-content {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.75s ease 0.5s;
+        }
+
+        .tl-item:hover .tl-bg {
+            filter: grayscale(0);
+        }
+
+        .tl-content {
+            transform: translate3d(0, 0, 0) translateY(25px);
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            margin: 0 1.618em;
+            top: 55%;
+            opacity: 0;
+            line-height: 1.75;
+        }
+
+        .tl-content h1 {
+            font-family: 'Pathway Gothic One', Helvetica Neue, Helvetica, Arial, sans-serif;
+            text-transform: uppercase;
+            color: #1779cf;
+            font-size: 1.44rem;
+            font-weight: normal;
+        }
+
+        .tl-year {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: 1;
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+        }
+
+        .tl-year p {
+            font-family: 'Pathway Gothic One', Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 1.728rem;
+            line-height: 0;
+            text-align: center !important;
+        }
+
+        .tl-bg {
+            transform: translate3d(0, 0, 0);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-position: center center;
+            transition: filter 0.5s ease;
+            filter: grayscale(100%);
+        }
+
+        #timeline2 {
+            display: none;
+            flex-direction: column;
+            background-color: #031625;
+            margin-top: 10vh
+        }
+
+        .tl-item2 {
+            transform: translate3d(0, 0, 0);
+            position: relative;
+            width: 100vw;
+            height: calc(100vh + 100px);
+            color: #fff;
+            overflow: hidden;
+            transition: width 0.5s ease;
+        }
+
+        .tl-item2:before,
+        .tl-item2:after {
+            transform: translate3d(0, 0, 0);
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .tl-item2:after {
+            background: rgba(3, 22, 37, 0.85);
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        .tl-item2:before {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 75%);
+            z-index: 1;
+            opacity: 0;
+            transform: translate3d(0, 0, 0) translateY(50%);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .tl-item2:hover {
+            width: 100% !important;
+        }
+
+        .tl-item2:hover:after {
+            opacity: 0;
+        }
+
+        .tl-item2:hover:before {
+            opacity: 1;
+            transform: translate3d(0, 0, 0) translateY(0);
+            transition: opacity 1s ease, transform 1s ease 0.25s;
+        }
+
+        .tl-item2:hover .tl-content2 {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.75s ease 0.5s;
+        }
+
+        .tl-item2:hover .tl-bg2 {
+            filter: grayscale(0);
+        }
+
+        .tl-content2 {
+            transform: translate3d(0, 0, 0) translateY(25px);
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            margin: 0 1.618em;
+            top: 40%;
+            opacity: 0;
+        }
+
+        .tl-content2 h1 {
+            font-family: 'Pathway Gothic One', Helvetica Neue, Helvetica, Arial, sans-serif;
+            text-transform: uppercase;
+            color: #1779cf;
+            font-size: 1.44rem;
+            font-weight: normal;
+        }
+
+        .tl-year2 {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: 1;
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            text-align: center !important;
+        }
+
+        .tl-year2 p {
+            font-family: 'Pathway Gothic One', Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 1.728rem;
+            line-height: 0;
+        }
+
+        .tl-bg2 {
+            transform: translate3d(0, 0, 0);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-position: center center;
+            transition: filter 0.5s ease;
+            filter: grayscale(100%);
+        }
+    </style>
+    <script>
+        function Bhuvi() {
+            if ($(window).width() > 1000) {
+                document.getElementById("Bhuvi").innerHTML = 'Bhuvi Pandey'
+                document.getElementById("Pandey").innerHTML = ''
+            }
+        }
+        function NoBhuvi() {
+            if ($(window).width() > 1000) {
+                document.getElementById("Bhuvi").innerHTML = 'Bhuvi'
+                document.getElementById("Pandey").innerHTML = 'Pandey'
+            }
+        }
+        function Ayushi() {
+            if ($(window).width() > 1000) {
+                document.getElementById("Ayushi").innerHTML = 'Ayushi Rout'
+                document.getElementById("Rout").innerHTML = ''
+            }
+        }
+        function NoAyushi() {
+            if ($(window).width() > 1000) {
+                document.getElementById("Ayushi").innerHTML = 'Ayushi'
+                document.getElementById("Rout").innerHTML = 'Rout'
+            }
+        }
+        function Yajika() {
+            if ($(window).width() > 1000) {
+                document.getElementById("Yajika").innerHTML = 'Yajika Dagar'
+                document.getElementById("Dagar").innerHTML = ''
+            }
+        }
+        function NoYajika() {
+            if ($(window).width() > 1000) {
+                document.getElementById("Yajika").innerHTML = 'Yajika'
+                document.getElementById("Dagar").innerHTML = 'Dagar'
+            }
+        }
+        function Manya() {
+            if ($(window).width() > 1000) {
+                document.getElementById("Manya").innerHTML = 'Manya Bhatia'
+                document.getElementById("Bhatia").innerHTML = ''
+            }
+        }
+        function NoManya() {
+            if ($(window).width() > 1000) {
+                document.getElementById("Manya").innerHTML = 'Manya'
+                document.getElementById("Bhatia").innerHTML = 'Bhatia'
+            }
+        }
+    </script>
+
+    <div id="meet">
+        <h1>MEET OUR TEAM</h1>
+    </div>
+    <section class="MeetUs">
+        <div class="tl-item" onmouseover="Bhuvi()" onmouseout="NoBhuvi()">
+
+            <div class="tl-bg" style="background-image: url(https://i.ibb.co/4T2vLt2/bhuvi.jpg)">
+            </div>
+
+            <div class="tl-year">
+                <p class="f2 heading--sanSerif" id='Bhuvi'>Bhuvi</p>
+                <p class="f2 heading--sanSerif" id='Pandey'>Pandey</p>
+            </div>
+
+            <div class="tl-content">
+                <h1>Team Manager</h1>
+                <p>With her impeccable management skills and clarity of thought, Bhuvi decides the deadlines for the
+                    tasks of the team. Her staunch belief in herself and the team creates an optimistic
+                    and
+                    dynamic atmosphere
+                    within the team.</p>
+            </div>
+
+        </div>
+        <div class="tl-item" onmouseover="Himanshu()" onmouseout="NoHimanshu()">
+
+            <div class="tl-bg" style="background-image: url(https://i.ibb.co/Bfd0KY3/himanshu.jpg)">
+            </div>
+
+            <div class="tl-year">
+                <p class="f2 heading--sanSerif">Himanshu</p>
+                <p class="f2 heading--sanSerif">Sharma</p>
+            </div>
+
+            <div class="tl-content">
+                <h1 class="f3 text--accent ttu">Design Engineer</h1>
+                <p>A perfectionist, Himanshu strives for excellence in whatever he undertakes. He is innovative and
+                    also practical, which
+                    helps him to pay attention to the minute details of every aspect of our project and refine it
+                    further.</p>
+            </div>
+
+        </div>
+
+        <div class="tl-item" onmouseover="Divyaansh()" onmouseout="NoDivyaansh()">
+
+            <div class="tl-bg" style="background-image: url(https://i.ibb.co/grZdTyK/divy.jpg)">
+            </div>
+
+            <div class="tl-year">
+                <p class="f2 heading--sanSerif">Divyaansh</p>
+                <p class="f2 heading--sanSerif">Seth</p>
+            </div>
+
+            <div class="tl-content">
+                <h1 class="f3 text--accent ttu">Systems Analyst</h1>
+                <p>With his amiable temperament, Divyaansh is capable of coming up with constructive
+                    solutions. His keen interest in Science and Technology drives him to work relentlessly.</p>
+            </div>
+
+        </div>
+
+        <div class="tl-item" onmouseover="Ayushi()" onmouseout="NoAyushi()">
+
+            <div class="tl-bg" style="background-image: url(https://i.ibb.co/Lk12Ldz/ayushi.jpg)">
+            </div>
+
+            <div class="tl-year">
+                <p class="f2 heading--sanSerif" id='Ayushi'>Ayushi</p>
+                <p class="f2 heading--sanSerif" id='Rout'>Rout</p>
+            </div>
+
+            <div class="tl-content">
+                <h1 class="f3 text--accent ttu">Graphic Designer</h1>
+                <p>A perfect combination of ingenuity and commitment, Ayushi performs all her jobs with full enthusiasm.
+                    She has original ideas and works to implement them, helping our team stay one step ahead of the
+                    others.</p>
+            </div>
+
+        </div>
+
+        <div class="tl-item" onmouseover="Yajika()" onmouseout="NoYajika()">
+
+            <div class="tl-bg" style="background-image: url(https://i.ibb.co/sKdwKx2/Dagger.jpg)">
+            </div>
+
+            <div class="tl-year">
+                <p class="f2 heading--sanSerif" id='Yajika'>Yajika</p>
+                <p class="f2 heading--sanSerif" id='Dagar'>Dagar</p>
+            </div>
+
+            <div class="tl-content">
+                <h1 class="f3 text--accent ttu">Resource Manager</h1>
+                <p>Diligent and dedicated, Yajika likes to give her best shot always. Being the resource manager, she
+                    looks for creative
+                    ways to handle the assets of the team.</p>
+            </div>
+
+        </div>
+
+        <div class="tl-item" onmouseover="Manya()" onmouseout="NoManya()">
+
+            <div class="tl-bg" style="background-image: url(https://i.ibb.co/h1zQpH6/manya.jpg)">
+            </div>
+
+            <div class="tl-year">
+                <p class="f2 heading--sanSerif" id='Manya'>Manya</p>
+                <p class="f2 heading--sanSerif" id='Bhatia'>Bhatia</p>
+            </div>
+
+            <div class="tl-content">
+                <h1 class="f3 text--accent ttu">Marketing Manager</h1>
+                <p>Manya has highly professional ways and can skilfully communicate with various companies to gather
+                    their support and make
+                    them believe in our cause. </p>
+            </div>
+
+        </div>
+    </section>
+
+    <hr color="yellow" style="margin-bottom: 0; width: 100vw; border-width: 1px; margin-left:-3px;">
+
+    <style>
+        #OurIdentity {
+            width: 100vw;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .OurIdentity-container {
+            width: 100vw;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 0px;
+            padding-top: 45px;
+            padding-left: 75px;
+            padding-right: 75px;
+        }
+
+        .OurIdentity-subcontainer {
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-bottom: 0px;
+            width: 100%;
+        }
+
+        .OurIdentity-container h1 {
+            font-size: 30pt;
+            font-family: Raleway;
+            font-weight: 900;
+            color: #000000;
+        }
+
+        .mainflexbox1 {
+            width: 100vw;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+            padding-bottom: 80px
+        }
+
+
+        .flexbox1_2 {
+            margin-top: relative;
+            width: 100vw;
+            height: 50vh;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+            padding-left: 120px;
+            padding-bottom: 0px;
+            flex-wrap: wrap;
+        }
+
+        .flexbox1_2-container {
+            width: 25vw;
+            margin-right: 40px;
+            background-color: #1D1D1D;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            justify-content: flex-start;
-            list-style: none;
+            justify-content: space-between;
+            border-radius: 15px;
+            padding-bottom: 50px;
+            margin-top: 20px;
+            filter: drop-shadow(5px 5px 5px #000000);
+            margin-bottom: 75px;
+            flex-wrap: wrap;
+            transition: transform 0.3s ease-out 100ms;
+            z-index: 1200;
         }
 
-        .menu-list li {
-            font-family: Raleway;
-            color: white;
-            padding: 15px;
-            cursor: pointer;
+        .flexbox1_2-container:hover {
+            transform: scale(1.15);
+        }
+
+        .flexbox1_2-container h6 {
+            font-size: 10pt;
+            font-family: Roboto;
+            color: #EC8C36;
+            padding-left: 25px;
+            margin-bottom: -10px
+        }
+
+        .flexbox1_2-container h2 {
             font-size: 15pt;
-            transition: .1s;
-            line-height: 80%;
+            font-family: Roboto;
+            font-weight: 500;
+            color: #ffffff;
+            padding-left: 25px;
+            margin-bottom: 0px
         }
 
-        .menu-list li:hover {
-            color: #00eeff;
-            transition: .1s;
-            transform: translate(0, -2px);
+        .flexbox1_2-container p {
+            font-size: 12pt;
+            font-family: 'Noto Serif', serif;
+            color: #dddddd;
+            padding-bottom: 0px;
+            padding-left: 25px;
+            padding-right: 25px;
         }
 
-        .change {
-            transform: rotate(180deg);
-        }
+        @media only screen and (max-width: 1250px) {
+            .flexbox1_2 {
+                margin-top: 100px;
+                display: grid;
+                grid-row-gap: 200px;
+                grid-column-gap: 50px;
+                grid-template-columns: auto auto;
+                margin-bottom: 250px;
+            }
 
-        .gifdiv {
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            text-align: center;
-            width: 100vw;
-            margin-top: 35vh;
-            height: 65vh;
-            background-color: #000000;
-        }
-
-        .gifdiv img {
-            height: 100%;
-            width: auto;
-            margin: 0px;
+            .flexbox1_2-container {
+                width: 35vw;
+            }
         }
 
         @media only screen and (max-width: 1160px) {
-            .header-logo-item3 {
-                display: none;
+
+            .flexbox1_2 {
+                justify-content: center;
+                margin-top: 60px;
+                display: grid;
+                grid-row-gap: 200px;
+                grid-column-gap: 50px;
+                grid-template-columns: auto auto;
+                padding-left: 50px;
+                margin-bottom: 300px;
+
             }
 
-            .navbar ul {
-                display: none;
+            .flexbox1_2-container {
+                width: 37vw;
             }
 
-            .menu-icon {
-                display: flex;
+            .OurIdentity-container {
+                margin-top: 0px;
             }
-
-            .wrapper {
-                height: 25vh;
-            }
-
-            .header-logo {
-                margin-top: -5vh;
-            }
-
-            .gifdiv {
-                margin-top: 25vh;
-                height: 75vh;
-            }
-
-            .menu-nav {
-                margin-top: 25vh !important;
-            }
-        }
-
-        @media only screen and (max-width: 775px) {
-            .gifdiv img {
-                width: 100%;
-                height: auto;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%) translate(-50%);
-            }
-        }
-
-        @media only screen and (max-width: 640px) {
-
-            .header-logo-item1 {
-                width: 75%;
-                height: auto;
-            }
-
-            .header-logo-item2 {
-                width: 100%;
-                height: auto;
-            }
-
-            .header-logo-item2 {
-                margin-top: 30px;
-                margin-left: -30px;
-            }
-
-            .menu-list li {
-                font-size: 15pt;
-            }
-
-            .wrapper {
-                height: 40vh !important;
-            }
-
-            .menu-nav {
-                margin-top: 40vh !important;
-            }
-
-            .gifdiv {
-                margin-top: 40vh;
-                height: 60vh;
-            }
-
         }
     </style>
-</head>
-
-<body oncontextmenu="return false">
-
-    <div class="wrapper">
-        <div class="header-logo">
-            <div>
-                <img src="https://i.ibb.co/MG76X49/black-mode-logo.png" alt='Quantum Logo' class="header-logo-item1">
-            </div>
-            <div>
-                <img src="https://i.ibb.co/5vkM3XX/Text.png" alt='Quantum Racing' class='header-logo-item2'>
-            </div>
-            <div>
-                <img src="https://i.ibb.co/6WxJr8H/F1-in-schools.png" alt="F1-in-schools" class="header-logo-item3">
+    <section id="OurIdentity">
+        <div class="OurIdentity-container">
+            <div class="OurIdentity-subcontainer">
+                <h1>
+                    Who are we?
+                </h1>
+                <p>
+                    We are a team of six 11th-grade students from Amity International School, Saket who have come
+                    together to form team QUANTUM. Our primary ideals are innovation, collaboration and deliberation.
+                </p>
             </div>
         </div>
+    </section>
 
-        <div class="navbar">
+    <section class="mainflexbox1">
+        <div class="flexbox1_2">
+            <div class="flexbox1_2-container">
+                <h6>ONE</h6>
+                <h2>Innovation</h2>
+                <p style='text-align: justify;
+                      text-justify: inter-word'>
+                    Innovation is the very cornerstone of our team. The motto of our team is ‘Delve into
+                    the
+                    intricacies’. We
+                    strive for excellence in our work that gives us the best possibility of
+                    making the most
+                    innovative and fastest F1 in Schools car.</p>
+            </div>
+            <div class="flexbox1_2-container">
+                <h6>TWO</h6>
+                <h2>Collaboration</h2>
+                <p style='text-align: justify;
+                      text-justify: inter-word'>
+                    At Team Quantum, we believe in working together towards a common goal, not in
+                    isolation, but
+                    cooperatively with the aid and support of other bodies, improving our efficiency and helping us give
+                    our best shot.</p>
+            </div>
+            <div class="flexbox1_2-container">
+                <h6>THREE</h6>
+                <h2>Deliberation</h2>
+                <p style='text-align: justify;
+                      text-justify: inter-word'>
+                    Every choice that we make is a calculated outcome of contemplation at a minute level.
+                    This enables us to have confidence in what we are doing and
+                    overcome all challengesthat come along our way intelligibly, with clarity of thought.
+                </p>
+            </div>
+        </div>
+    </section>
+    <hr color="yellow" style="margin-bottom: 0; margin-top: 0px; width: 100vw; border-width: 1px; margin-left:-3px;">
+
+    <style>
+        .car1 {
+            height: 100vh;
+            width: 100vw;
+            background-image: url('https://c4.wallpaperflare.com/wallpaper/422/882/465/ineos-iwc-lewis-hamilton-mercedes-amg-petronas-formula-1-hd-wallpaper-preview.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .car2 {
+            padding: 0%;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(0, 5, 77);
+            opacity: 0.7;
+        }
+    </style>
+
+    <div class='car1'>
+        <div class='car2'></div>
+    </div>
+
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Raleway;
+        }
+
+
+        h1 {
+            color: rgb(255, 255, 255);
+            font-weight: 700;
+            margin-top: 50px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            line-height: 23px;
+        }
+
+        /* --- Start progress bar --- */
+
+        .process-wrapper {
+            margin: auto;
+            max-width: 1080px;
+        }
+
+        #progress-bar-container {
+            position: relative;
+            width: 90%;
+            margin: auto;
+            height: 100px;
+            margin-top: 65px;
+        }
+
+        #progress-bar-container ul {
+            padding: 0;
+            margin: 0;
+            padding-top: 15px;
+            z-index: 9999;
+            position: absolute;
+            width: 100%;
+            margin-top: -40px
+        }
+
+        #progress-bar-container li:before {
+            content: " ";
+            display: block;
+            margin: auto;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: solid 2px white;
+            transition: all ease 0.3s;
+
+        }
+
+        #progress-bar-container li.active:before,
+        #progress-bar-container li:hover:before {
+            border: solid 2px #1D1D1D;
+
+            background: linear-gradient(to right, #00eeff 0%, #1D1D1D 100%);
+        }
+
+        #progress-bar-container li {
+            list-style: none;
+            float: left;
+            width: 20%;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            font-size: 11px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all ease 0.2s;
+            vertical-align: bottom;
+            height: 60px;
+            position: relative;
+        }
+
+        #progress-bar-container li .step-inner {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            font-size: 14px;
+        }
+
+        #progress-bar-container li.active,
+        #progress-bar-container li:hover {
+            color: rgb(0, 255, 255);
+        }
+
+        #progress-bar-container li:after {
+            content: " ";
+            display: block;
+            width: 6px;
+            height: 6px;
+            background: #777;
+            margin: auto;
+            border: solid 7px #fff;
+            border-radius: 50%;
+            margin-top: 40px;
+            box-shadow: 0 2px 13px -1px rgba(0, 0, 0, 0.3);
+            transition: all ease 0.2s;
+
+        }
+
+        #progress-bar-container li:hover:after {
+            background: #555;
+        }
+
+        #progress-bar-container li.active:after {
+            background: #207893;
+        }
+
+        #progress-bar-container #line {
+            width: 80%;
+            margin: auto;
+            background: #eee;
+            height: 6px;
+            position: absolute;
+            left: 10%;
+            top: 57px;
+            z-index: 1;
+            border-radius: 50px;
+            transition: all ease 0.9s;
+        }
+
+        #progress-bar-container #line-progress {
+            content: " ";
+            width: 3%;
+            height: 100%;
+            background: #207893;
+            background: linear-gradient(to right, #207893 0%, #2ea3b7 100%);
+            position: absolute;
+            z-index: 2;
+            border-radius: 50px;
+            transition: all ease 0.9s;
+        }
+
+        #progress-content-section {
+            width: 90%;
+            margin: auto;
+            background: #f3f3f3;
+            border-radius: 4px;
+        }
+
+        #progress-content-section .section-content {
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        #progress-content-section .section-content h2 {
+            font-size: 17px;
+            text-transform: uppercase;
+            color: #333;
+            letter-spacing: 1px;
+        }
+
+        #progress-content-section .section-content p {
+            font-size: 16px;
+            line-height: 1.8em;
+            color: #777;
+        }
+
+        #progress-content-section .section-content {
+            display: none;
+            animation: FadeInUp 700ms ease 1;
+            animation-fill-mode: forwards;
+            transform: translateY(15px);
+            opacity: 0;
+        }
+
+        #progress-content-section .section-content.active {
+            display: block;
+        }
+
+        @keyframes FadeInUp {
+            0% {
+                transform: translateY(15px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+    </style>
+
+
+    <h1>Our Journey</h1>
+    <br>
+    <div class="process-wrapper">
+        <div id="progress-bar-container">
             <ul>
-                <li>
-                    <a href="/F1-in-schools" class="a_parent">
-                        <span>F1 in Schools</span>
-                    </a>
+                <li class="step step01 active">
+                    <div class="step-inner">19 Dec 2020</div>
                 </li>
-                <li><a href="#" class="a_parent2">
-                        <div class="wrap">
-                            <span>Team Quantum</span>
-                            <span class="icon">
-                                <ion-icon name="chevron-down-outline"></ion-icon>
-                            </span>
-                        </div>
-                        
-                    </a>
-                    <div class="dd_menu">
-                        <ul>
-                            <li>
-                                <a href="/team-quantum/#OurIdentity" class="dd_menu_a">
-                                    <span>
-                                        Our Identity
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/team-quantum/#MeetUs" class="dd_menu_a">
-                                    <span>Our Team</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/team-quantum/#car" class="dd_menu_a">
-                                    <span>Our Car</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/team-quantum/#OurJourney" class="dd_menu_a">
-                                    <span>Our Journey</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                <li class="step step02">
+                    <div class="step-inner">29 June 2021</div>
                 </li>
-
-                <li><a href="/sponsors" class="a_parent">
-                        <span>Our Sponsors</span>
-                    </a>
+                <li class="step step03">
+                    <div class="step-inner">10 June 2021</div>
                 </li>
-
-                <li><a href="/weblogs" class="a_parent">
-                        <span>Weblogs</span>
-                    </a>
-
+                <li class="step step04">
+                    <div class="step-inner">25 July 2021</div>
+                </li>
+                <li class="step step05">
+                    <div class="step-inner">14 August 2021</div>
                 </li>
             </ul>
 
-            <div class="menu-icon">
-                <ion-icon name="chevron-down-outline"></ion-icon>
+            <div id="line">
+                <div id="line-progress"></div>
+            </div>
+        </div>
+
+        <div id="progress-content-section">
+            <div class="section-content discovery active">
+                <h2>QUANTUM is born</h2>
+                <p>Six students from Grade XI come together to work towards a common cause: building the fastest F1 car
+                    prototype.</p>
+            </div>
+
+            <div class="section-content strategy">
+                <h2>Marketing activities initiated</h2>
+                <p>In the marketing front, Quantum aims to build a reputable brand identity, one that the sponsors would
+                    proudly associate with. Our unique approach to marketing, based on Simon Sinek’s ‘Start With Why’
+                    enabled us to come up with a marketing framework at par with industry standards wherein a number of
+                    activities ranging from tech sessions to digital media campaigns were taken into consideration.
+                </p>
+            </div>
+
+            <div class="section-content creative">
+                <h2>Let's Quanvo!</h2>
+                <p>Quanvo is a talk show started by our team in which we interact with experts and professionals from
+                    diverse industries, relevant to our campaign, on themes like Leadership, Entrepreneurship,
+                    Innovation and Technology. Streaming on various platforms like Spotify, Anchor, Apple podcasts and
+                    YouTube enabled us to reach to a greater number of people.
+                </p>
+            </div>
+
+            <div class="section-content production">
+                <h2>Tachyon on the Tracks</h2>
+                <p>After months of work on designing, manufacturing and assembling, the pinnacle of our team; Tachyon,
+                    was made. It is central to our team identity as it is a personification of swiftness, innovation and
+                    precision. For the purposes of achieving perfection, we developed two algorithms which reduced our
+                    time exponentially and provide highly accurate optimizations.
+                </p>
+            </div>
+
+            <div class="section-content analysis">
+                <h2>QUANTUM: National Champions</h2>
+                <p>After about a year of relentless hard work, Team Quantum Racing emerged as the National Champion of
+                    F1 in Schools India Open Finals along with Best Pit Display Award, Most Innovative Thinking Award,
+                    Best Enterprise Portfolio award and 3 other nominations, making us the most awarded Indian team
+                    ever.
+                </p>
             </div>
         </div>
     </div>
-
-    <div class="menu-nav">
-        <ul class="menu-list">
-            <li>
-                <a href="/F1-in-schools">
-                    <span>F1 in Schools</span>
-                </a>
-            </li>
-            <li>
-                <span>Team Quantum</span>
-
-                <div class="dd_menu2">
-                    <ul>
-                        <li>
-                            <a href="/team-quantum/#OurIdentity" class="dd_menu_a2">
-                                <span>
-                                    Our Identity
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/team-quantum/#MeetUs" class="dd_menu_a2">
-                                <span>Our Team</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/team-quantum/#car" class="dd_menu_a2">
-                                <span>Our Car</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/team-quantum/#OurJourney" class="dd_menu_a2">
-                                <span>Our Journey</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-            </li>
-
-            <li>
-                <a href="/sponsors">
-                    <span>Our Sponsors</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="/weblogs">
-                    <span>Weblogs</span>
-                </a>
-            </li>
-
-        </ul>
-    </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
-        function toggleMenu(x) {
-            x.classList.toggle("change");
-        }
-        $('.menu-icon').on('click', function () {
-            toggleMenu(this);
-            $('.menu-nav').slideToggle();
+
+        $(".step").click(function () {
+            $(this).addClass("active").prevAll().addClass("active");
+            $(this).nextAll().removeClass("active");
         });
 
-        function toggleMenu(x) {
-            x.classList.toggle("change");
-        }
-        $('.icon').on('click', function () {
-            toggleMenu(this);
-            $('.dd_menu').slideToggle();
+        $(".step01").click(function () {
+            $("#line-progress").css("width", "3%");
+            $(".discovery").addClass("active").siblings().removeClass("active");
         });
 
-        $('.dd_menu_a').on('click', function () {
-            $('.dd_menu').slideUp();
+        $(".step02").click(function () {
+            $("#line-progress").css("width", "25%");
+            $(".strategy").addClass("active").siblings().removeClass("active");
         });
 
-        $('.a_parent').on('click', function () {
-            $('.dd_menu').slideUp();
+        $(".step03").click(function () {
+            $("#line-progress").css("width", "50%");
+            $(".creative").addClass("active").siblings().removeClass("active");
         });
 
-        function toggleMenu(x) {
-            x.classList.toggle("change");
-        }
-        $('.dd_menu_a2').on('click', function () {
-            toggleMenu(this);
-            $('.menu-nav').slideUp();
+        $(".step04").click(function () {
+            $("#line-progress").css("width", "75%");
+            $(".production").addClass("active").siblings().removeClass("active");
         });
+
+        $(".step05").click(function () {
+            $("#line-progress").css("width", "100%");
+            $(".analysis").addClass("active").siblings().removeClass("active");
+        });
+
+
     </script>
 
+
+
+
+
+
+
+
     <style>
-        .animation {
-            display: grid;
-            grid-template-columns: repeat(10, auto);
-            transition: scale 2s, transform 2s, left 2s;
+        #footer {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: fit-content;
+            background-color: #1D1D1D;
+            margin-top: 50px;
+            align-items: center;
+            color: rgb(233, 233, 233);
+            font-family: Raleway;
+            margin-right: 0%;
+            padding-right: 0%;
+            z-index: 1200;
         }
 
-        .animation_div {
-            background-color: rgb(0, 0, 0);
-            height: 70vh;
-            margin-top: 30vh;
-            transition: background-color 1s;
+        .footer-item {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
+            height: fit-content;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            justify-content: space-evenly;
+            align-items: flex-start;
         }
 
-        .heading {
-            color: white;
-            font-size: 6vw;
-            text-align: center;
-            position: absolute;
-            top: 55vh;
-            left: 5vw;
-            opacity: 0;
-            z-index: 2;
-            transition: opacity 5s;
+        .footer-item-SM {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
+            height: fit-content;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            justify-content: center;
+            align-items: flex-start;
         }
 
-        @media only screen and (max-width: 750px) {
-            .heading {
-                font-size: 10vw;
-                margin-top: 0vh;
-                margin-left: 3vw;
+        .footer-item-item-small {
+            display: block;
+            height: fit-content;
+            margin-left: 40px;
+            margin-right: 40px;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .footer-item-item-small ul {
+            list-style: none;
+            margin-left: -40px;
+            line-height: 200%;
+            color: rgb(255, 230, 0);
+
+        }
+
+        .footer-item-item-small ul li {
+            opacity: 0.7;
+        }
+
+        .footer-item-item-small ul li:hover {
+            opacity: 1;
+        }
+
+        .footer-item-item-large {
+            display: block;
+            width: 40vw;
+            height: fit-content;
+            margin-left: 20px;
+            margin-right: 20px;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        @media (max-width:735px) {
+            .footer-item {
+                flex-wrap: wrap;
             }
+
+            .footer-item-item-large {
+                width: 80vw;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+        }
+
+        @media (max-width: 521px) {
+            .footer-item-item-small {
+                text-align: center;
+            }
+        }
+
+        .footer-item-SM .link {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-clip: content-box;
+            padding: 10px;
+            transition: .5s;
+            color: #D7D0BE;
+            margin-left: 15px;
+            margin-right: 15px;
+            font-size: 30px;
+            opacity: 0.5;
+        }
+
+        .footer-item-SM .link span {
+            display: block;
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .footer-item-SM .link:hover,
+        .footer-item-SM .link:active {
+            opacity: 1;
+        }
+
+
+        .footer-item-SM .link.twitter {
+            background-color: #00ACEE;
+            color: white;
+        }
+
+        .footer-item-SM .link.facebook {
+            background-color: #3B5998;
+            color: white;
+        }
+
+        .footer-item-SM .link.instagram {
+            background-color: #bc2a8d;
+            color: white;
+        }
+
+        .footer-item-SM .link.linkedin {
+            background-color: #00a0dc;
+            color: white;
+        }
+
+        @media (max-width:400px) {
+            .footer-item-SM .link {
+                padding-left: 5px;
+                padding-right: 5px;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
         }
     </style>
 
 
 
+    <section id='footer'>
+        <div class='footer-item'>
+            <div class='footer-item-item-small'>
+                <h1>Navigate</h1>
+                <ul>
+                    <li>
+                        <a class='link' href='/'>Home Page</a>
+                    </li>
+                    <li>
+                        <a class='link' href='/F1-in-schools'>F1 in schools</a>
+                    </li>
+                    <li>
+                        <a class='link' href='/team-quantum'>Team Quantum</a>
+                    </li>
 
-    <script>
+                    <li>
+                        <a class='link' href='/sponsors'>Our Sponsors</a>
+                    </li>
+                    <li>
+                        <a class='link' href='/weblogs'>Weblogs</a>
+                    </li>
+                </ul>
+            </div>
 
-        let container = document.getElementsByClassName('animation')[0];
-        let grids = document.querySelectorAll('.animation_div');
-        let text = document.getElementsByClassName('heading')[0];
-        let num = 0;
+            <div class='footer-item-item-small'>
+                <h1>Additional Links</h1>
+                <ul>
+                    <li>
+                        <a class='link' href='https://www.f1inschools.com/' target="_blank"> F1 in schools &trade;
+                            Official Page</a>
+                    </li>
+                    <li>
+                        <a class='link' href='https://www.amity.edu/ais/saket/' target="_blank"> Amity International
+                            School, Saket</a>
+                    </li>
+                    <li>
+                        <a class='link' href='https://stemclubindia.com/'>Stem Club India</a>
+                    </li>
+                </ul>
+            </div>
 
-        const delay = time => new Promise(resolve => setTimeout(resolve, time));
-
-        grids.forEach(grid => {
-
-            $(window).resize(function () {
-                location.reload();
-            });
-
-            delay(0).then(() => {
-                setTimeout(() => {
-                    grid.style.backgroundColor = 'rgb(23, 0, 105)';
-                }, num += 100);
-            })
-
-            delay(500).then(() => {
-                setTimeout(() => {
-                    grid.style.backgroundColor = 'rgb(57, 19, 192)';
-                    grid.style.width = '90%';
-                    text.style.opacity = '1';
-                }, num += 100);
-            })
-
-            if ($(window).width() >= 1025) {
-
-                delay(800).then(() => {
-                    setTimeout(() => {
-                        container.style.transform = 'rotate(20deg) scale(1.5)';
-                        container.style.height = '300vh'
-                        container.style.width = '100vw'
-                    }, num += 100);
-                })
-
-            }
-
-            else if (460 < $(window).width() && 1025 > $(window).width()) {
-
-                delay(800).then(() => {
-                    setTimeout(() => {
-                        container.style.transform = 'rotate(20deg) scale(1.5)';
-                        container.style.height = '250vh'
-                        container.style.width = '150vw'
-                    }, num += 100);
-                })
-            } else if (460 >= $(window).width()) {
-
-                delay(800).then(() => {
-                    setTimeout(() => {
-                        container.style.transform = 'rotate(20deg) scale(1.5)';
-                        container.style.height = '250vh'
-                        container.style.width = '250vw'
-                    }, num += 100);
-                })
-            }
-        })
-
-    </script>
+            <div class='footer-item-item-large'>
+                <h1>Quantum</h1>
+                <p>We are a team of six 11th-grade students from Amity International School, Saket who have come
+                    together to compete in F1 in schools &trade; STEM challenge. We call ourselves Team Quantum Racing
+                    with our primary ideals being Innovation, Collaboration, Deliberation and most importantly carrying
+                    all our tasks with staunch intricacy.</p>
+            </div>
+        </div>
 
 
+        <div class='footer-item-SM'>
+            <a href="https://www.facebook.com/Team-Quantum-107396974835724" class="link facebook" target="_blank"><span
+                    class="fa fa-facebook-square"></span></a>
+            <a href="https://twitter.com/TeamQuantum18" class="link twitter" target="_blank"><span
+                    class="fa fa-twitter"></span></a>
+            <a href="https://www.instagram.com/teamquantumracing/" class="link instagram" target="_blank"><span
+                    class="fa fa-instagram"></span></a>
+            <a href="https://www.linkedin.com/in/team-quantum-641270212/" class="link linkedin" target="_blank"><span
+                    class="fa fa-linkedin"></span></a>
+        </div>
 
-</body>
+
+        <div class='footer-item-item'>
+            <p>Quantum Racing &#169 2021</p>
+        </div>
+    </section>
 
 </html>
